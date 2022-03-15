@@ -1,0 +1,1 @@
+This is a shopping cart app for me to practice using react routers with The Odin Project.
