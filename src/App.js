@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-
+import HomePage from './Components/homepage'
 function App() {
   return (
     <div>
-      <p>Clean React App</p>
+      <HomePage/>
     </div>
   )
 }
