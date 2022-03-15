@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./Cart/cart.js";
 import Shop from "./Shop/shop.js";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 const HomePage = () => {
   const [cart, setCart] = useState([]);
-  const updateCart = (e) => {
-    setCart(e);
+
+  const updateCart = (newValue) => {
+    setCart([...cart, [newValue.name, newValue.id]])
   };
   const removeFromCart = e => {
       console.log(e.target.value)
@@ -21,7 +22,7 @@ const HomePage = () => {
           path="/bothlol"
           element={
             <div>
-              <Shop updateCart={updateCart}/>
+              <Shop updateCart={updateCart} cart={cart}/>
               <Cart cart={cart} removeFromCart={removeFromCart}/>
             </div>
           }
