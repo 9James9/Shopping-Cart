@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Item from './Item/item'
-const Shop = ({updateCart}) => {
+const Shop = ({updateCart, removeFromCart}) => {
     const navigate = useNavigate()
     const [cart, setCart] = useState([])
     useEffect(() => {

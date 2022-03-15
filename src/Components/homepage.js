@@ -3,7 +3,7 @@ import Cart from "./Cart/cart.js";
 import Shop from "./Shop/shop.js";
 import React, { useState } from "react";
 const HomePage = () => {
-  const [cart, setCart] = useState("");
+  const [cart, setCart] = useState([]);
   const updateCart = (e) => {
     setCart(e);
   };
@@ -15,13 +15,13 @@ const HomePage = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/shop" element={<Shop updateCart={updateCart} />}></Route>
-        <Route path="/cart" element={<Cart cart={cart} />}></Route>
+        <Route path="/shop" element={<Shop updateCart={updateCart} cart={cart}/>}></Route>
+        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart}/>}></Route>
         <Route
           path="/bothlol"
           element={
             <div>
-              <Shop updateCart={updateCart} removeFromCart={removeFromCart}/>
+              <Shop updateCart={updateCart}/>
               <Cart cart={cart} removeFromCart={removeFromCart}/>
             </div>
           }
