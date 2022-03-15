@@ -1,8 +1,14 @@
 import React from 'react'
 
-const CartItem = ({itemName}) => {
+const CartItem = ({itemName, index}) => {
   return (
-    <div>{itemName}</div>
+    <div>
+        <div>
+            <p>{itemName}</p>
+            <p>{index}</p>
+            <button>Remove</button>
+        </div>
+    </div>
   )
 }
 
