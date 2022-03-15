@@ -29,8 +29,7 @@ let newIds = []
         <h1>Cart PAGE!</h1>
         <ul>
         {names.map((item, index) => {
-            console.log(item)
-          return <li key={index}>{item}</li>;
+          return <CartItem key={index} itemName={item}/>
         })}
       </ul>
         <p></p>
