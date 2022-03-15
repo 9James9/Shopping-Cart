@@ -9,7 +9,7 @@ const Shop = ({updateCart}) => {
     })
     const updateShop = newValue => { 
         setCart([...cart, [newValue.name, newValue.id]])
-        console.log(cart)
+        // console.log(cart)
     }
   return (
     <div>
