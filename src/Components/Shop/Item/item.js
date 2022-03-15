@@ -10,7 +10,7 @@ const Item = ({name,id, updateShop}) => {
         <div>
             <button value={values} onClick={() => {
                 updateShop(values)
-            }}>Click me</button>
+            }}>{name}</button>
         </div>
     </div>
   )

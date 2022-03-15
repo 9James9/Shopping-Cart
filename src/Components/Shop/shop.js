@@ -3,24 +3,22 @@ import { useNavigate } from 'react-router-dom'
 import Item from './Item/item'
 const Shop = ({updateCart}) => {
     const navigate = useNavigate()
-    const [cart, setCart] = useState("")
-    const handleChange = e => {
-        setCart(e.target.value)
-
-    }
+    const [cart, setCart] = useState([])
     useEffect(() => {
         updateCart(cart)
     })
-    const updateShop = e => {
-        console.log(e.name)
+    const updateShop = newValue => { 
+        setCart([...cart, [newValue.name, newValue.id]])
+        console.log(cart)
     }
   return (
     <div>
         <div>
             <h1 onClick={() => navigate("/cart")}>Cart</h1>
-            <input onChange={handleChange}></input>
-            <Item name="name 33" updateShop={updateShop}/>
-            <h1>{cart}</h1>
+            <Item id="0"name="Shoes" updateShop={updateShop}/>
+            <Item id="1"name="Socks" updateShop={updateShop}/>
+            <Item id="2"name="Coal" updateShop={updateShop}/>
+            <h1>Shopping page: {cart}</h1>
         </div>
     </div>
   )
