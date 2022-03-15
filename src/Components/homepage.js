@@ -10,12 +10,15 @@ const HomePage = () => {
   };
   const removeFromCart = e => {
       //creates new cart array with old values up until the index to delete, then from the index to delete + 1
-    if (e.target.value !== -1) {
-        setCart([
-            ...cart.slice(0,e.target.value),
-            ...cart.slice(e.target.value + 1)
-        ])
-    }
+    // if (e.target.value !== -1) {
+    //     let firstSlice = cart
+    //     let secondSlice = cart
+    //     console.log(...firstSlice.slice(0,e.target.value))
+    //     setCart([
+    //         ...firstSlice.slice(0,e.target.value),
+    //         ...secondSlice.slice(e.target.value + 1)
+    //     ])
+    // }
   }
   return (
     <BrowserRouter>
