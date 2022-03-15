@@ -3,23 +3,23 @@ import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem/cartitem";
 const Cart = ({ cart, removeFromCart }) => {
   const [names, setNames] = useState([]);
-  const [ids, setIds] = useState([]);
+//   const [ids, setIds] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
     filterData(cart);
   }, [cart]);
   const filterData = (e) => {
     let newNames = [];
-    let newIds = [];
+    // let newIds = [];
     for (let i = 0; i < cart.length; i++) {
       newNames.push(cart[i][0]);
     }
-    for (let i = 0; i < cart.length; i++) {
-      newIds.push(cart[i][1]);
-    }
+    // for (let i = 0; i < cart.length; i++) {
+    //   newIds.push(cart[i][1]);
+    // }
 
     setNames(newNames);
-    setIds(newIds);
+    // setIds(newIds);
   };
   return (
     <div>
@@ -28,7 +28,6 @@ const Cart = ({ cart, removeFromCart }) => {
         <h1>Cart PAGE!</h1>
         <ul>
           {names.map((item, index) => {
-            console.log(index);
             return <CartItem key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
           })}
         </ul>

@@ -6,12 +6,16 @@ const HomePage = () => {
   const [cart, setCart] = useState([]);
 
   const updateCart = (newValue) => {
-    setCart([...cart, [newValue.name, newValue.id]])
+    setCart([...cart, [newValue.name, cart.length]])
   };
   const removeFromCart = e => {
-      console.log(e.target.value)
-      let newCart = cart.splice(e.target.value,1)
-        setCart(newCart)
+      //creates new cart array with old values up until the index to delete, then from the index to delete + 1
+    if (e.target.value !== -1) {
+        setCart([
+            ...cart.slice(0,e.target.value),
+            ...cart.slice(e.target.value + 1)
+        ])
+    }
   }
   return (
     <BrowserRouter>
