@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Item from './Item/item'
 const Shop = ({updateCart}) => {
     const navigate = useNavigate()
     const [cart, setCart] = useState("")
@@ -9,13 +10,16 @@ const Shop = ({updateCart}) => {
     }
     useEffect(() => {
         updateCart(cart)
-        console.log("updating cart")
     })
+    const updateShop = e => {
+        console.log(e.name)
+    }
   return (
     <div>
         <div>
             <h1 onClick={() => navigate("/cart")}>Cart</h1>
             <input onChange={handleChange}></input>
+            <Item name="name 33" updateShop={updateShop}/>
             <h1>{cart}</h1>
         </div>
     </div>
