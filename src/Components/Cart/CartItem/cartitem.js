@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CartItem = ({itemName, index}) => {
+const CartItem = ({itemName, index, removeFromCart}) => {
   return (
     <div>
         <div>
             <p>{itemName}</p>
             <p>{index}</p>
-            <button>Remove</button>
+            <button value={index} onClick={removeFromCart}>Remove</button>
         </div>
     </div>
   )

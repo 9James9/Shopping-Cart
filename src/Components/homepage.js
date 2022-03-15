@@ -7,6 +7,11 @@ const HomePage = () => {
   const updateCart = (e) => {
     setCart(e);
   };
+  const removeFromCart = e => {
+      console.log(e.target.value)
+      let newCart = cart.splice(e.target.value,1)
+        setCart(newCart)
+  }
   return (
     <BrowserRouter>
       <Routes>
@@ -16,8 +21,8 @@ const HomePage = () => {
           path="/bothlol"
           element={
             <div>
-              <Shop updateCart={updateCart}/>
-              <Cart cart={cart}/>
+              <Shop updateCart={updateCart} removeFromCart={removeFromCart}/>
+              <Cart cart={cart} removeFromCart={removeFromCart}/>
             </div>
           }
         ></Route>

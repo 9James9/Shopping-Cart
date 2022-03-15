@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem/cartitem";
-const Cart = ({ cart }) => {
+const Cart = ({ cart, removeFromCart }) => {
   const [names, setNames] = useState([]);
   const [ids, setIds] = useState([]);
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const Cart = ({ cart }) => {
         <ul>
           {names.map((item, index) => {
             console.log(index);
-            return <CartItem key={index} index={index} itemName={item} />;
+            return <CartItem key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
           })}
         </ul>
         <p></p>

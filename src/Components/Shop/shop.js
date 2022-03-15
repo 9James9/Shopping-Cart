@@ -6,6 +6,7 @@ const Shop = ({updateCart}) => {
     const [cart, setCart] = useState([])
     useEffect(() => {
         updateCart(cart)
+        console.log(cart)
     })
     const updateShop = newValue => { 
         setCart([...cart, [newValue.name, newValue.id]])
