@@ -8,6 +8,12 @@ const HomePage = () => {
   const updateCart = (newValue) => {
     checkForDuplicates(newValue)
     let item = [newValue.name, cart.length, newValue.quantity,newValue.id]
+    let itemData = {
+      name: newValue.name,
+      position: cart.length,
+      quantity: newValue.quantity,
+      id: newValue.id
+    }
     // console.log(item)
     setCart([...cart, item])
   };
