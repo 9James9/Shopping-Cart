@@ -12,8 +12,9 @@ const Cart = ({ cart, removeFromCart }) => {
     let newNames = [];
     // let newIds = [];
     for (let i = 0; i < cart.length; i++) {
-      newNames.push(cart[i][0]);
+      newNames.push(cart[i].name);
     }
+    console.log(newNames)
     // for (let i = 0; i < cart.length; i++) {
     //   newIds.push(cart[i][1]);
     // }
@@ -27,9 +28,9 @@ const Cart = ({ cart, removeFromCart }) => {
         <h1 onClick={() => navigate("/shop")}>Shop</h1>
         <h1>Cart PAGE!</h1>
         <ul>
-          {/* {names.map((item, index) => {
+          {names.map((item, index) => {
             return <CartItem key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
-          })} */}
+          })}
         </ul>
         <p></p>
       </div>
