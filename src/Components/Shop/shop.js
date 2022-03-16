@@ -10,7 +10,6 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
       for (let i = 0; i < cart.length; i++) {
         newNames.push(cart[i].name);
       }
-      console.log(newNames)
       // for (let i = 0; i < cart.length; i++) {
       //   newIds.push(cart[i][1]);
       // }
@@ -19,6 +18,7 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
       // setIds(newIds);
     };
     useEffect(() => {
+      // console.log(cart)
       filterData(cart)
     },[cart])
   return (
@@ -29,7 +29,7 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
             <Item id="1"name="Socks" updateShop={updateCart}/>
             <Item id="2"name="Coal" updateShop={updateCart}/>
             {names.map((item,index) => {
-              return <p>{item}</p>
+              return <p key={index}>{item}</p>
             })}
         </div>
     </div>

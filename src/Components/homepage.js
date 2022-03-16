@@ -6,7 +6,7 @@ const HomePage = () => {
   const [cart, setCart] = useState([]);
 
   const updateCart = (newValue) => {
-    // checkForDuplicates(newValue)
+console.log(checkForDuplicates(cart))
     let item = [newValue.name, cart.length, newValue.quantity,newValue.id]
     let itemData = {
       name: newValue.name,
@@ -21,24 +21,38 @@ const HomePage = () => {
       let value = parseInt(e.target.value)
       setCart(cart.slice(0,value).concat(cart.slice(value + 1)))
   }
-  // const checkForDuplicates = e => {
-  //   // console.log(e.id)
-  //   // console.log(cart)
+  const checkForDuplicates = e => {
+    let duplicates = []
+    cart.forEach((item, i) => {
 
-  //   cart.forEach((item, i) => {
-  //     // console.log(item[3])
-  //     if (item[3] == e.id) {
-  //       console.log('duplicate spotted')
-  //       setCart(prevState => ({
-  //         cart: {
-  //           ...prevState.cart,
-  //           [item[i]]: ["test"],
-  //         }
-  //       }))
-  //     }
-  //   })
-  //   console.log(cart)
-  // }
+      console.log(e[i].id)
+      if (item.id == e[i].id) {
+        console.log('duplicate spotted')
+        duplicates.push(item.id)
+      } else {
+        return false
+      }
+    })
+    return duplicates.length == 0 ? false : true
+  }
+  const adjustQuantity = e => {
+    cart.forEach((item, i) => {
+      if (item.id == e.id) {
+        console.log('duplicate spotted')
+        setCart(prevState => ({
+          cart: {
+            ...prevState.cart,
+            [item.position]: {
+              quantity: "2"
+            }
+          }
+        }))
+      }
+      console.log(item)
+    })
+    console.log(cart)
+  }
+
   return (
     <BrowserRouter>
       <Routes>

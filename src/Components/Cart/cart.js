@@ -14,7 +14,6 @@ const Cart = ({ cart, removeFromCart }) => {
     for (let i = 0; i < cart.length; i++) {
       newNames.push(cart[i].name);
     }
-    console.log(newNames)
     // for (let i = 0; i < cart.length; i++) {
     //   newIds.push(cart[i][1]);
     // }
