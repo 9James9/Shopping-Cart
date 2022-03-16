@@ -27,9 +27,9 @@ const Cart = ({ cart, removeFromCart }) => {
         <h1 onClick={() => navigate("/shop")}>Shop</h1>
         <h1>Cart PAGE!</h1>
         <ul>
-          {names.map((item, index) => {
+          {/* {names.map((item, index) => {
             return <CartItem key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
-          })}
+          })} */}
         </ul>
         <p></p>
       </div>

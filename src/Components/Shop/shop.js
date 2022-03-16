@@ -11,7 +11,7 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
             <Item id="0"name="Shoes" updateShop={updateCart}/>
             <Item id="1"name="Socks" updateShop={updateCart}/>
             <Item id="2"name="Coal" updateShop={updateCart}/>
-            <h1>Shopping page: {cart}</h1>
+            {/* <h1>Shopping page: {cart}</h1> */}
         </div>
     </div>
   )
