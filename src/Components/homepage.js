@@ -19,6 +19,36 @@ const HomePage = () => {
     //         ...secondSlice.slice(e.target.value + 1)
     //     ])
     // }
+
+
+    // let newCart = cart.forEach(item => {
+    //   // console.log(item[1])
+    //   item.filter((x,y) => {
+    //     console.log(y)
+    //     console.log(e.target.value)
+    //     console.log( e.target.value.toString() == y)
+    //     return y !== e.target.value
+    //   })
+    // })
+    // console.log(newCart)
+      // console.log(cart.slice(0,e.target.value))
+
+      let value = parseInt(e.target.value)
+      // if (value == 0) {
+      //   console.log(cart.slice(1))
+      // } else if (
+      //   value == cart.length - 1
+      // ) {
+      //   console.log(cart.slice(0,value))
+      // } else {
+      //   console.log(value + 1)
+      //         console.log(cart.slice(value + 1))
+      // }
+
+      
+      setCart(cart.slice(0,value).concat(cart.slice(value + 1)))
+    
+
   }
   return (
     <BrowserRouter>
