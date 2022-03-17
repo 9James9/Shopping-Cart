@@ -31,5 +31,6 @@ button {
     background-color: var(--button-bg-color);
     border-radius: 10px;
     color: var(--button-text-color);
+    cursor: pointer;
 }
 
