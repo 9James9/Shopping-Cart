@@ -1,3 +1,11 @@
 * {
     box-sizing: border-box;
+    background-color: #FFF3B0;
 }
+button {
+    padding: 10px;
+    background-color: #335C67;
+    border-radius: 10px;
+    color: white;
+}
+

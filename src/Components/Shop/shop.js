@@ -23,16 +23,21 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
       filterData(cart)
     },[cart])
   return (
-    <div>
-        <div>
-            <h1 onClick={() => navigate("/cart")}>Cart</h1>
+    <div className='shop__container'>
+                  <h1 className="shop__title" onClick={() => navigate("/cart")}>Zamazonia - Free shipping for Prime members</h1>
+        <div className='shop__itemContainer'>
             <Item id="0"name="Shoes" updateShop={updateCart}/>
             <Item id="1"name="Socks" updateShop={updateCart}/>
             <Item id="2"name="Coal" updateShop={updateCart}/>
-            {names.map((item,index) => {
+
+        </div>
+        <div className='shop__cartDisplay'>
+          <h4>Cart</h4>
+        {names.map((item,index) => {
               return <p key={index}>{item}</p>
             })}
-        </div>
+            <button>Checkout now</button>
+          </div>
     </div>
   )
 }
