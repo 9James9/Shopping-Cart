@@ -3,7 +3,7 @@ import Cart from "./Cart/cart.js";
 import Shop from "./Shop/shop.js";
 import React, { useState, useEffect } from "react";
 import Header from "./Header/header.js";
-const HomePage = () => {
+const Router = () => {
   const [cart, setCart] = useState([]);
 
   const updateCart = (newValue) => {
@@ -74,4 +74,4 @@ console.log(checkForDuplicates(cart))
   );
 };
 
-export default HomePage;
+export default Router;

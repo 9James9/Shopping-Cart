@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import HomePage from './Components/homepage'
+import Router from './Components/router'
 function App() {
   return (
     <div className='app__container'>
-      <HomePage/>
+      <Router/>
     </div>
   )
 }
