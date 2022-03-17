@@ -3,6 +3,7 @@ import Cart from "./Cart/cart.js";
 import Shop from "./Shop/shop.js";
 import React, { useState, useEffect } from "react";
 import Header from "./Header/header.js";
+import Home from "./Home/home.js";
 const Router = () => {
   const [cart, setCart] = useState([]);
 
@@ -58,6 +59,7 @@ console.log(checkForDuplicates(cart))
     <BrowserRouter>
     <Header/>
       <Routes>
+        <Route path="/" element={<Home/>}></Route>
         <Route path="/shop" element={<Shop updateCart={updateCart} cart={cart}/>}></Route>
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart}/>}></Route>
         <Route
