@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
+}
+html body {
     background-color: var(--main-bg-color);
 }
-
 :root {
     --color1: #335C67;
     --color2: #FFF3B0;
@@ -15,6 +16,7 @@
     --button-text-color: white;
     --shop-cart-bg: var(--color4);
     --shop-cart-text: white;
+    --itemContainer-bg: var(--color3);
 }
 
 
