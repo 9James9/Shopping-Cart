@@ -27,3 +27,7 @@
 
     border: 2px solid var(--header-listItem-bg);
 }
+
+.header_nav--container {
+    margin-right: 40px;
+}
