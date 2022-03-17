@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Item from './Item/item'
+import './shop.css'
 const Shop = ({updateCart, removeFromCart,cart}) => {
   const [names, setNames] = useState([])
     const navigate = useNavigate()
