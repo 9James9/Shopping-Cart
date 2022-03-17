@@ -18,6 +18,8 @@ html body {
     --shop-cart-text: white;
     --itemContainer-bg: var(--color3);
     --h1-color: var(--color5);
+    --header-listItem-bg: var(--color1);
+    --header-listItem-color: var(--color2);
 }
 
 h1 {
