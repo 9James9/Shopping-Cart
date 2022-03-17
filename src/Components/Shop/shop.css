@@ -1,5 +1,4 @@
 .shop__container {
-    border: 2px solid red;
     height: 100vh;
     padding: 10px;
 }
@@ -16,10 +15,16 @@
 }
 
 .shop__cartDisplay {
-    background-color: blue;
+    background-color: var(--shop-cart-bg);
     height: 200px;
     width: 200px;
     position: absolute;
     overflow: auto;
     padding: 10px;
+}
+
+.shop__cartDisplay--title {
+    background-color: var(--shop-cart-bg);
+    color: var(--shop-cart-text);
+    text-align: center
 }

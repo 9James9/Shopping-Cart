@@ -62,7 +62,7 @@ console.log(checkForDuplicates(cart))
           path="/bothlol"
           element={
             <div>
-              <Shop updateCart={updateCart} cart={cart}/>
+              <Shop removeFromCart={removeFromCart}updateCart={updateCart} cart={cart}/>
               <Cart cart={cart} removeFromCart={removeFromCart}/>
             </div>
           }

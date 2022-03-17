@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Item from './Item/item'
 import './shop.css'
-const Shop = ({updateCart, removeFromCart,cart}) => {
+const Shop = ({updateCart,cart}) => {
   const [names, setNames] = useState([])
     const navigate = useNavigate()
     const filterData = (e) => {
@@ -32,7 +32,7 @@ const Shop = ({updateCart, removeFromCart,cart}) => {
 
         </div>
         <div className='shop__cartDisplay'>
-          <h4>Cart</h4>
+          <h4 className='shop__cartDisplay--title'>Cart</h4>
         {names.map((item,index) => {
               return <p key={index}>{item}</p>
             })}
