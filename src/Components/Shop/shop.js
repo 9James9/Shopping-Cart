@@ -36,7 +36,7 @@ const Shop = ({updateCart,cart}) => {
         {names.map((item,index) => {
               return <p key={index}>{item}</p>
             })}
-            <button>Checkout now</button>
+            <button onClick={() => navigate('/cart')}>Checkout now</button>
           </div>
     </div>
   )
