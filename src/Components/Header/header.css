@@ -31,3 +31,11 @@
 .header_nav--container {
     margin-right: 40px;
 }
+@media (max-width: 1000px) {
+    .header__container {
+        position: absolute;
+        z-index: 2;
+        margin-left: -20px;
+        bottom: 0;
+    }
+}
