@@ -62,7 +62,7 @@ let index = e.target.value
       ...prevState,
       [index]: {
         ...prevState[index],
-        quantity: "test",
+        quantity: "2",
         
       }
     }))
