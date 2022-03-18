@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem/cartitem";
 import './cart.css'
-const Cart = ({ cart, removeFromCart }) => {
+const Cart = ({ cart, removeFromCart, increaseQuantity }) => {
   const [names, setNames] = useState([]);
 //   const [ids, setIds] = useState([]);
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const Cart = ({ cart, removeFromCart }) => {
         <button className="checkout__button">Checkout Now</button>
         <ul>
           {names.map((item, index) => {
-            return <CartItem key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
+            return <CartItem increaseQuantity={increaseQuantity} key={index} index={index} itemName={item} removeFromCart={removeFromCart}/>;
           })}
         </ul>
         <button className="checkout__button">Checkout Now</button>

@@ -54,20 +54,36 @@ console.log(checkForDuplicates(cart))
     })
     console.log(cart)
   }
+  const increaseQuantity = e => {
+    console.log(e.target.value)
+let index = e.target.value
+    setCart(prevState => (
+      {
+      ...prevState,
+      [index]: {
+        ...prevState[index],
+        quantity: "test",
+        
+      }
+    }))
 
+  }
+  useEffect(() => {
+    console.log(cart)
+  },[cart])
   return (
     <BrowserRouter>
     <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/shop" element={<Shop updateCart={updateCart} cart={cart}/>}></Route>
-        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart}/>}></Route>
+        <Route path="/cart" element={<Cart cart={cart} increaseQuantity={increaseQuantity}removeFromCart={removeFromCart}/>}></Route>
         <Route
           path="/bothlol"
           element={
             <div>
               <Shop removeFromCart={removeFromCart}updateCart={updateCart} cart={cart}/>
-              <Cart cart={cart} removeFromCart={removeFromCart}/>
+              <Cart cart={cart} increaseQuantity={increaseQuantity} removeFromCart={removeFromCart}/>
             </div>
           }
         ></Route>
